@@ -28,12 +28,12 @@ public class ShipController : MonoBehaviour
 
         mouseDistance.x = (lookInput.x - screenCenter.x) / screenCenter.y;
         mouseDistance.y = (lookInput.y - screenCenter.y) / screenCenter.y;
-        
+
         mouseDistance = Vector2.ClampMagnitude(mouseDistance, 1f);
 
-        rollInput= Mathf.Lerp(rollInput, Input.GetAxisRaw("Roll"), rollAcceleration * Time.deltaTime );
+        rollInput = Mathf.Lerp(rollInput, Input.GetAxisRaw("Roll"), rollAcceleration * Time.deltaTime);
 
-        transform.Rotate(-mouseDistance.y * lookRateSpeed * Time.deltaTime, mouseDistance.x * lookRateSpeed * Time.deltaTime, rollInput * rollSpeed, Space.Self);
+        transform.Rotate(-mouseDistance.y * lookRateSpeed * Time.deltaTime, mouseDistance.x * lookRateSpeed * Time.deltaTime, rollInput * rollSpeed * Time.deltaTime, Space.Self);
 
         activeForwardSpeed = Mathf.Lerp(activeForwardSpeed, Input.GetAxisRaw("Vertical") * forwardSpeed, forwardAcceleration * Time.deltaTime);
         activeStrafeSpeed = Mathf.Lerp(activeStrafeSpeed, Input.GetAxis("Horizontal")* strafeSpeed, strafeAcceleration * Time.deltaTime);

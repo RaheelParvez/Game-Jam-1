@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class CollisionDetecter : MonoBehaviour
 {
+    public AudioSource audioPlayer;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -21,6 +23,7 @@ public class CollisionDetecter : MonoBehaviour
         if(collision.gameObject.tag == "Enemy")
         {
             Destroy(gameObject);
+            audioPlayer.Play();
         }
     }
 }
