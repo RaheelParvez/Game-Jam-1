@@ -11,4 +11,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/_project/Scenes/Menu.unity
     guid: 315387205a31b4e43b0dc3cb7e059cc0
+  - enabled: 0
+    path: Assets/_project/Scenes/LoadingScreen.unity
+    guid: 4d0c6c1f46cbd40228e51658b04a4917
+  - enabled: 1
+    path: Assets/_project/Scenes/VolumeAdjustment.unity
+    guid: 654b53a406de34b1d93f1abb4c1e9a5e
   m_configObjects: {}
