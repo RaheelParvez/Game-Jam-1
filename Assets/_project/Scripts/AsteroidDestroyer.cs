@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class AsteroidDestroyer : MonoBehaviour
 {
-   
+    public Scoring score;
     // Start is called before the first frame update
     void Start()
     {
@@ -18,7 +18,6 @@ public class AsteroidDestroyer : MonoBehaviour
         if (collision.gameObject.tag == "Player")
         {
             Destroy(gameObject);
-            scoreCount.AddScore(1);
            
         }
 
