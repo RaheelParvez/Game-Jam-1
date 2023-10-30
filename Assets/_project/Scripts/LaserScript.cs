@@ -23,7 +23,10 @@ public class LaserScript : MonoBehaviour
             Invoke("StopShooting", 0.1f);
         }
 
+<<<<<<< HEAD
+=======
         
+>>>>>>> 80eb1df5a90a42a5c91a1ea4283b657b548782bd
     }
 
     void Shoot()
