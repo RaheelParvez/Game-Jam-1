@@ -2,10 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-
-public class AsteroidDestroyer : MonoBehaviour
+public class Test : MonoBehaviour
 {
-
     public Scoring score;
     // Start is called before the first frame update
     void Start()
@@ -14,21 +12,12 @@ public class AsteroidDestroyer : MonoBehaviour
     }
 
     // Update is called once per frame
-   
-
-    private void OnCollisionEnter(Collision collision)
+    void Update()
     {
-        if (collision.gameObject.tag == "Player")
+        if (Input.GetKeyDown(KeyCode.P))
         {
-            Destroy(gameObject);
             score.AddScore(1);
             score.UpdateScore();
-
         }
-
-
     }
-
-   
 }
-
