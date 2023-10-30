@@ -20,12 +20,10 @@ public class LaserScript : MonoBehaviour
         {
             Shoot();
             audioPlayer.Play();
+            Invoke("StopShooting", 0.1f);
         }
 
-        if(Input.GetMouseButtonUp(0))
-        {
-            StopShooting();
-        }
+        
     }
 
     void Shoot()

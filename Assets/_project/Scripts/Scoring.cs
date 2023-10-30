@@ -21,7 +21,7 @@ public class Scoring : MonoBehaviour
 
     public void UpdateScore()
     {
-        ScoreText.text = "Score 0" + score;
+        ScoreText.text = "Score " + score;
     }
 
    void Update()
